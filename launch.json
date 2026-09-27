@@ -1,0 +1,26 @@
+{
+  "kind": "univ4_hook",
+  "hook": {
+    "contract": "OHLCCandleHook",
+    "constructorArgs": [
+      "0xE03A1074c86CFeDd5C142C4F04F1a1536e203543"
+    ],
+    "permissions": [
+      "afterInitialize",
+      "afterSwap"
+    ]
+  },
+  "token": {
+    "contract": "CNDL",
+    "name": "Candles",
+    "symbol": "CNDL",
+    "decimals": 18
+  },
+  "pool": {
+    "pairedCurrency": "0x0000000000000000000000000000000000000000",
+    "fee": 3000,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336000"
+  },
+  "notes": "OHLCCandleHook records five-minute OHLC tick candles for native-ETH pools. The intended pool is native ETH as currency0 and CNDL as currency1 on Sepolia. initialPrice is decimal sqrtPriceX96 = 1000 * 2^96, corresponding to 1,000,000 CNDL per ETH; it adopts the value exercised by LaunchRehearsalTest and FactoryCandleLifecycleTest, including a first buy after one-sided CNDL seeding into an ETH-less pool. The hook constructor takes only the specified PoolManager address; CNDL has no constructor arguments. Only afterInitialize and afterSwap are enabled, requiring hook address bits 0x1040 under mask 0x3fff. Every callback authenticates the PoolManager. The hook charges no fee, moves no funds and returns no swap adjustment. State is keyed by PoolId; non-native currency0 pools are ignored. Initialization records the initial tick. Each bucket opens at the preceding tick, includes the open and post-swap ticks in its high/low, closes at the latest tick, and accumulates absolute currency deltas and swap count. uint128 counters saturate. getCandles clamps count to 288 and returns zero structs for missing buckets; readers draw gaps flat at the previous close. Anyone can paint these candles with swaps, including zero-volume swaps through empty liquidity: they are display data, never an oracle or pricing input. ABI exports are docs/abi/OHLCCandleHook.json and docs/abi/CNDL.json. This technical manifest does not set launch policy or attest review, admission or deployment; services own policy compatibility and signed artifact linkage."
+}
