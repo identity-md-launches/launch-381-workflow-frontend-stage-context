@@ -8,6 +8,7 @@ import {SwapParams} from "v4-core/src/types/PoolOperation.sol";
 import {BalanceDelta, toBalanceDelta} from "v4-core/src/types/BalanceDelta.sol";
 import {OHLCCandleHook} from "../src/OHLCCandleHook.sol";
 import {Vm} from "forge-std/Vm.sol";
+import {TickMath} from "v4-core/src/libraries/TickMath.sol";
 
 /// @dev Nested measurement excludes intrinsic transaction gas even when Foundry isolation is enabled.
 contract CallbackMeter {
@@ -25,6 +26,31 @@ contract CallbackMeter {
 }
 
 contract CandleGasTest is HookFixture {
+    function testGas_freshCandleAtBothSignedExtremesBelowCeiling() public {
+        int24[2] memory ticks = [TickMath.MIN_TICK, TickMath.MAX_TICK - 1];
+        for (uint256 i; i < ticks.length; ++i) {
+            key.fee = uint24(100 + i);
+            id = key.toId();
+            manager.initialize(key, TickMath.getSqrtPriceAtTick(ticks[i]));
+            // Isolate afterSwap as in the other gas tests: real manager slot0, authenticated
+            // callback, fresh candle slots, nonzero volumes, and explicitly cooled storage.
+            coolCallbackSlots(10, 0);
+            uint256 gasUsed = measureCallback();
+            emit log_named_uint(
+                i == 0 ? "fresh negative tick callback gas" : "fresh positive tick callback gas", gasUsed
+            );
+            assertLt(gasUsed, 100_000);
+            OHLCCandleHook.CandleData memory c = getCandle(10);
+            assertEq(c.open, ticks[i]);
+            assertEq(c.high, ticks[i]);
+            assertEq(c.low, ticks[i]);
+            assertEq(c.close, ticks[i]);
+            assertEq(c.volumeEth, 1 ether);
+            assertEq(c.volumeToken, 1 ether);
+            assertEq(c.swaps, 1);
+        }
+    }
+
     function testGas_firstSwapColdFreshSlotsBelowCeiling() public {
         coolCallbackSlots(10, 0);
         uint256 gasUsed = measureCallback();
