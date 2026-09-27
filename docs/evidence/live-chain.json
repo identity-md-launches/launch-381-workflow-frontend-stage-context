@@ -1,0 +1,165 @@
+{
+  "timestamp": "2026-09-27T07:19:25.771Z",
+  "expectedChainId": 11155111,
+  "routerSource": "https://developers.uniswap.org/deployments",
+  "results": [
+    {
+      "url": "https://ethereum-sepolia-rpc.publicnode.com",
+      "chainId": 11155111,
+      "contracts": [
+        {
+          "name": "CNDL",
+          "address": "0x5845f623771593af103d486e451353d9355caaeb",
+          "codeBytes": 1722
+        },
+        {
+          "name": "OHLCCandleHook",
+          "address": "0x59b7a674a6bbaf2fb25defff3c5b9d77950d1040",
+          "codeBytes": 5111
+        },
+        {
+          "name": "poolManager",
+          "address": "0xe03a1074c86cfedd5c142c4f04f1a1536e203543",
+          "codeBytes": 24009
+        },
+        {
+          "name": "universalRouter",
+          "address": "0x3a9d48ab9751398bbfa63ad67599bb04e4bdf98b",
+          "codeBytes": 19540
+        },
+        {
+          "name": "quoter",
+          "address": "0x61b3f2011a92d183c7dbadbda940a7555ccf9227",
+          "codeBytes": 5820
+        },
+        {
+          "name": "stateView",
+          "address": "0xe1dd9c3fa50edb962e442f60dfbc432e24537e4c",
+          "codeBytes": 3531
+        },
+        {
+          "name": "positionManager",
+          "address": "0x429ba70129df741b2ca2a85bc3a2a3328e5c09b4",
+          "codeBytes": 23877
+        },
+        {
+          "name": "permit2",
+          "address": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+          "codeBytes": 9152
+        },
+        {
+          "name": "PoolSwapTest",
+          "address": "0x9b6b46e2c869aa39918db7f52f5557fe577b6eee",
+          "codeBytes": 6950
+        }
+      ],
+      "passed": true
+    },
+    {
+      "url": "https://rpc.sepolia.ethpandaops.io",
+      "chainId": 11155111,
+      "contracts": [
+        {
+          "name": "CNDL",
+          "address": "0x5845f623771593af103d486e451353d9355caaeb",
+          "codeBytes": 1722
+        },
+        {
+          "name": "OHLCCandleHook",
+          "address": "0x59b7a674a6bbaf2fb25defff3c5b9d77950d1040",
+          "codeBytes": 5111
+        },
+        {
+          "name": "poolManager",
+          "address": "0xe03a1074c86cfedd5c142c4f04f1a1536e203543",
+          "codeBytes": 24009
+        },
+        {
+          "name": "universalRouter",
+          "address": "0x3a9d48ab9751398bbfa63ad67599bb04e4bdf98b",
+          "codeBytes": 19540
+        },
+        {
+          "name": "quoter",
+          "address": "0x61b3f2011a92d183c7dbadbda940a7555ccf9227",
+          "codeBytes": 5820
+        },
+        {
+          "name": "stateView",
+          "address": "0xe1dd9c3fa50edb962e442f60dfbc432e24537e4c",
+          "codeBytes": 3531
+        },
+        {
+          "name": "positionManager",
+          "address": "0x429ba70129df741b2ca2a85bc3a2a3328e5c09b4",
+          "codeBytes": 23877
+        },
+        {
+          "name": "permit2",
+          "address": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+          "codeBytes": 9152
+        },
+        {
+          "name": "PoolSwapTest",
+          "address": "0x9b6b46e2c869aa39918db7f52f5557fe577b6eee",
+          "codeBytes": 6950
+        }
+      ],
+      "passed": true
+    },
+    {
+      "url": "https://sepolia.rpc.sentio.xyz",
+      "chainId": 11155111,
+      "contracts": [
+        {
+          "name": "CNDL",
+          "address": "0x5845f623771593af103d486e451353d9355caaeb",
+          "codeBytes": 1722
+        },
+        {
+          "name": "OHLCCandleHook",
+          "address": "0x59b7a674a6bbaf2fb25defff3c5b9d77950d1040",
+          "codeBytes": 5111
+        },
+        {
+          "name": "poolManager",
+          "address": "0xe03a1074c86cfedd5c142c4f04f1a1536e203543",
+          "codeBytes": 24009
+        },
+        {
+          "name": "universalRouter",
+          "address": "0x3a9d48ab9751398bbfa63ad67599bb04e4bdf98b",
+          "codeBytes": 19540
+        },
+        {
+          "name": "quoter",
+          "address": "0x61b3f2011a92d183c7dbadbda940a7555ccf9227",
+          "codeBytes": 5820
+        },
+        {
+          "name": "stateView",
+          "address": "0xe1dd9c3fa50edb962e442f60dfbc432e24537e4c",
+          "codeBytes": 3531
+        },
+        {
+          "name": "positionManager",
+          "address": "0x429ba70129df741b2ca2a85bc3a2a3328e5c09b4",
+          "codeBytes": 23877
+        },
+        {
+          "name": "permit2",
+          "address": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+          "codeBytes": 9152
+        },
+        {
+          "name": "PoolSwapTest",
+          "address": "0x9b6b46e2c869aa39918db7f52f5557fe577b6eee",
+          "codeBytes": 6950
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "liveChainVerified": true,
+  "realTransactionsBroadcast": 0
+}

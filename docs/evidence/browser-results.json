@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-09-27T07:32:36.353Z",
+  "urlPath": "/preview/",
+  "browser": "153.0.8010.12",
+  "checks": [
+    "Disconnected reads, disabled transactions, and actionable missing-wallet error",
+    "Wrong chain blocks trading; unknown chain adds exact supplied parameters and switches again",
+    "288 chart candles and volume bars, leading flat gap, keyboard selector and data table",
+    "Invalid amounts/tolerance show inline errors and focus the offending input",
+    "Buy quotes and simulations are eth_call only; wallet request uses exact PoolSwapTest arguments and native value; receipt confirmed",
+    "Sell requires separate exact CNDL approval to PoolSwapTest, then quotes, simulates and confirms a zero-value sell",
+    "Partial-fill simulation shows actual spend and unspent input",
+    "Input changes invalidate previews; failed simulation surfaces revert and prevents signing",
+    "Wallet transaction rejection is recoverable and sends nothing",
+    "Account change invalidates quote and refreshes balances",
+    "Quotes expire and block stale confirmation after 60 seconds",
+    "Token transfer and router-approval revocation simulate, send and wait for receipts",
+    "Automated axe WCAG 2/2.1 A/AA scan has no violations in connected populated state",
+    "1440/940/750/390/320px reflow, local font loaded, plus 200% text enlargement without document overflow",
+    "Visible 3px keyboard focus and reduced-motion transition suppression",
+    "Measured five actual text/background pairs meet 4.5:1",
+    "Missing router bytecode blocks transactions",
+    "Event RPC errors are separate from pool reads and trading readiness",
+    "RPC failure keeps actions disabled and Refresh recovers",
+    "Tampered implementation ABI stops startup",
+    "No page errors or failed local production resources; relative subpath assets resolve"
+  ],
+  "screenshots": [
+    "docs/evidence/desktop-buy.png",
+    "docs/evidence/desktop.png",
+    "docs/evidence/mobile.png",
+    "docs/evidence/mobile-320.png",
+    "docs/evidence/keyboard-focus.png",
+    "docs/evidence/rpc-error.png"
+  ],
+  "errors": [],
+  "transactions": "Mock EIP-1193 and RPC only; no real broadcast",
+  "passed": true
+}

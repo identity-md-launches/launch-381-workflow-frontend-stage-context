@@ -1,0 +1,32 @@
+[
+  {
+    "selector": ".page-intro > p",
+    "foreground": "rgb(97, 107, 94)",
+    "background": "rgb(245, 245, 240)",
+    "ratio": 5.089261796629915
+  },
+  {
+    "selector": ".chart-note",
+    "foreground": "rgb(97, 107, 94)",
+    "background": "rgb(255, 255, 255)",
+    "ratio": 5.565883595041708
+  },
+  {
+    "selector": ".primary",
+    "foreground": "rgb(255, 255, 255)",
+    "background": "rgb(56, 96, 47)",
+    "ratio": 7.2857312620629635
+  },
+  {
+    "selector": ".testnet-badge",
+    "foreground": "rgb(140, 74, 20)",
+    "background": "rgb(252, 240, 227)",
+    "ratio": 6.027093557542521
+  },
+  {
+    "selector": ".trade-panel h2",
+    "foreground": "rgb(32, 43, 32)",
+    "background": "rgb(255, 255, 255)",
+    "ratio": 14.707706317947148
+  }
+]

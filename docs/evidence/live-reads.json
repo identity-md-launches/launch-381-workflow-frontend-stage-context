@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-09-27T07:22:29.397Z",
+  "rpc": "https://ethereum-sepolia-rpc.publicnode.com",
+  "transactionsBroadcast": 0,
+  "verified": true,
+  "market": {
+    "poolId": "0xa6b8134f1b01b0475c40772fe84e473685bbbf3953e7d4dd7821b71e88282a68",
+    "block": "11791807",
+    "timestamp": 1790493744,
+    "sqrtPrice": "560227709747861399187319382274582",
+    "tick": 177284,
+    "lastTick": 177284,
+    "latestBucket": "0",
+    "liquidity": "0",
+    "decimals": 18,
+    "symbol": "CNDL",
+    "supply": "1000000000000000000000000000",
+    "price": 50000000,
+    "candles": 288,
+    "recordedCandles": 0
+  },
+  "events": {
+    "fromBlock": "11791647",
+    "toBlock": "11791807",
+    "count": 0
+  },
+  "quote": {
+    "inputWei": "100000000000000",
+    "result": [
+      "4962985601069505286390",
+      "171152"
+    ],
+    "method": "eth_call only"
+  }
+}

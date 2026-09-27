@@ -1,0 +1,53 @@
+{
+  "chainId": 11155111,
+  "repoUrl": "https://github.com/identity-md-launches/launch-284-ohlccandlehook",
+  "version": 1,
+  "launchId": "fbed9a85-d733-4ebc-bcef-b3c64f494b96",
+  "manifest": {
+    "hook": {
+      "contract": "OHLCCandleHook",
+      "permissions": [
+        "afterInitialize",
+        "afterSwap"
+      ],
+      "constructorArgs": [
+        "0xE03A1074c86CFeDd5C142C4F04F1a1536e203543"
+      ]
+    },
+    "kind": "univ4_hook",
+    "pool": {
+      "fee": 3000,
+      "tickSpacing": 60,
+      "initialPrice": "79228162514264337593543950336000",
+      "pairedCurrency": "0x0000000000000000000000000000000000000000"
+    },
+    "notes": "OHLCCandleHook records five-minute OHLC tick candles for native-ETH pools. The intended pool is native ETH as currency0 and CNDL as currency1 on Sepolia. initialPrice is decimal sqrtPriceX96 = 1000 * 2^96, corresponding to 1,000,000 CNDL per ETH; it adopts the value exercised by LaunchRehearsalTest and FactoryCandleLifecycleTest, including a first buy after one-sided CNDL seeding into an ETH-less pool. The hook constructor takes only the specified PoolManager address; CNDL has no constructor arguments. Only afterInitialize and afterSwap are enabled, requiring hook address bits 0x1040 under mask 0x3fff. Every callback authenticates the PoolManager. The hook charges no fee, moves no funds and returns no swap adjustment. State is keyed by PoolId; non-native currency0 pools are ignored. Initialization records the initial tick. Each bucket opens at the preceding tick, includes the open and post-swap ticks in its high/low, closes at the latest tick, and accumulates absolute currency deltas and swap count. uint128 counters saturate. getCandles clamps count to 288 and returns zero structs for missing buckets; readers draw gaps flat at the previous close. Anyone can paint these candles with swaps, including zero-volume swaps through empty liquidity: they are display data, never an oracle or pricing input. ABI exports are docs/abi/OHLCCandleHook.json and docs/abi/CNDL.json. This technical manifest does not set launch policy or attest review, admission or deployment; services own policy compatibility and signed artifact linkage.",
+    "token": {
+      "name": "Candles",
+      "symbol": "CNDL",
+      "contract": "CNDL",
+      "decimals": 18
+    }
+  },
+  "contracts": [
+    {
+      "name": "CNDL",
+      "txHash": "0x2c85b4fa9965b86070b7827a1a4ec2b8ac2edc83270a0cf41f486f2b88ef5abf",
+      "abiHash": "38880b8e56d42ce900f744a7908c7139632a49f1c3f33385c64ceaed29d37bee",
+      "address": "0x5845f623771593af103d486e451353d9355caaeb",
+      "blockNumber": 11791647,
+      "creationCodeHash": "a53dd05cf40a943ba03cc8d9ea45e90091351b3a16e69b915ea828f505f6d45d"
+    },
+    {
+      "name": "OHLCCandleHook",
+      "txHash": "0x2c85b4fa9965b86070b7827a1a4ec2b8ac2edc83270a0cf41f486f2b88ef5abf",
+      "abiHash": "3804b4873c69fc1ba3c1fd34ac8f941979d1752442848153b95c4b08e738694d",
+      "address": "0x59b7a674a6bbaf2fb25defff3c5b9d77950d1040",
+      "blockNumber": 11791647,
+      "creationCodeHash": "dc41fa8326499b5cf648f263905d94498fc3e900addb263534d28dd70f8f1060"
+    }
+  ],
+  "sourceCommit": "99360eb2aed3b3fbf17bb327c0f5b9aa31881bb6",
+  "abiInstructions": "Build ABIs from this exact source commit; compare canonicalKeccak(abi) with abiHash. Verify deployed code on the stated chain before enabling transactions.",
+  "attestationHash": "19e2f3dc982c9395c7fcf7723e6b002651527e4571a6de744a7a277bba51aece"
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "viewport": 1440,
+    "scroll": 1440,
+    "font": true
+  },
+  {
+    "viewport": 940,
+    "scroll": 940,
+    "font": true
+  },
+  {
+    "viewport": 750,
+    "scroll": 750,
+    "font": true
+  },
+  {
+    "viewport": 390,
+    "scroll": 390,
+    "font": true
+  },
+  {
+    "viewport": 320,
+    "scroll": 320,
+    "font": true
+  }
+]

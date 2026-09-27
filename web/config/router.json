@@ -1,0 +1,6 @@
+{
+  "name": "PoolSwapTest",
+  "address": "0x9b6b46e2c869aa39918db7f52f5557fe577b6eee",
+  "source": "https://developers.uniswap.org/deployments",
+  "note": "Explicit assignment router; absent from the supplied network.uniswapV4 table. That table is preserved unchanged."
+}

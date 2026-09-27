@@ -1,0 +1,33 @@
+{
+  "name": "candles-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm run build && vite preview --host 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc --noEmit && vite build && node scripts/export.mjs",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "tsx --test tests/core.test.ts",
+    "test:browser": "tsx tests/browser.ts",
+    "check:export": "node scripts/export.mjs --check",
+    "check:chain": "tsx scripts/check-chain.ts"
+  },
+  "dependencies": {
+    "@fontsource-variable/dm-sans": "^5.3.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "viem": "^2.56.9"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^5.2.0",
+    "axe-core": "^4.13.0",
+    "playwright": "^1.63.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^7.3.6"
+  }
+}

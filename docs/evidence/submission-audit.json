@@ -1,0 +1,22 @@
+{
+  "allSubmissionFileBytesBeforeThisAudit": 3774889,
+  "budgetBytes": 8388608,
+  "changedFiles": 55,
+  "changedPathsWithinScope": true,
+  "ignoreFileBudget": [
+    "web/.gitignore"
+  ],
+  "submodules": 0,
+  "dependencyAndCacheFilesIncluded": 0,
+  "distBytes": 639675,
+  "manifestAssets": 11,
+  "allAssetHashesVerified": true,
+  "exactDeploymentIdentityVerified": true,
+  "unchangedNetworkObjectVerified": true,
+  "walletAddChainParametersVerified": true,
+  "largestExportedFileBytes": 288306,
+  "gitCommitCreated": false,
+  "gitCommitBlocker": "git add failed: .git/index.lock could not be created because .git is read-only",
+  "actualGitBundleMeasured": false,
+  "bundleMeasurementLimit": "No commit is possible; recorded size is all tracked and nonignored deliverable file bytes, before Git compression."
+}

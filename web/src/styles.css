@@ -1,0 +1,135 @@
+@font-face { font-family: "DM Sans Variable"; font-style: normal; font-weight: 100 1000; font-display: swap; src: url("@fontsource-variable/dm-sans/files/dm-sans-latin-wght-normal.woff2") format("woff2-variations"); }
+:root {
+  font-family: 'DM Sans Variable', 'DM Sans', system-ui, sans-serif;
+  color-scheme: light;
+  --neutral-0: #fff; --neutral-50: #f5f5f0; --neutral-100: #eeefe8; --neutral-200: #dfe2d7; --neutral-500: #616b5e; --neutral-700: #46513f; --neutral-900: #202b20;
+  --green-50: #eaf1e5; --green-600: #38602f; --green-800: #254a1d; --orange-50: #fcf0e3; --orange-700: #8c4a14; --red-50: #fff1ec; --red-700: #ab422b;
+  --bg: var(--neutral-50); --surface: var(--neutral-0); --subtle: var(--neutral-100); --text: var(--neutral-900); --muted: var(--neutral-500); --line: var(--neutral-200); --accent: var(--green-600); --accent-hover: var(--green-800); --accent-soft: var(--green-50); --positive: #397052; --negative: var(--red-700); --warning: var(--orange-700); --warning-bg: var(--orange-50); --error: var(--red-700); --error-bg: var(--red-50); --focus: #1e61ab;
+  --text-xs: .75rem; --text-sm: .8125rem; --text-md: .9375rem; --text-body: 1rem; --text-lg: 1.125rem;
+  --radius: 16px; --control-radius: 8px;
+  font-size: 16px; line-height: 1.5; font-weight: 400; background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+* {box-sizing: border-box}
+body {margin: 0}
+a {color: inherit; text-underline-offset: .2em; text-decoration-thickness: from-font}
+button, input {font: inherit}
+button, summary, input[type=range] {cursor: pointer}
+button {min-height: 44px; border: 1px solid var(--line); border-radius: var(--control-radius); background: var(--surface); color: var(--text); padding: .65rem 1rem; font-size: var(--text-sm); font-weight: 650}
+button:disabled {cursor: not-allowed; color: var(--muted); background: var(--subtle)}
+input {color: var(--text); background: var(--surface); border: 1px solid var(--line); border-radius: var(--control-radius); padding: .75rem; width: 100%; min-height: 44px; min-width: 0; font-size: 1rem}
+input[aria-invalid=true] {outline: 2px solid var(--error); outline-offset: 2px}
+:focus-visible {outline: 3px solid var(--focus); outline-offset: 4px}
+h1,h2,h3,p {margin: 0}
+h1,h2,h3 {line-height: 1.15; text-wrap: balance}
+p {text-wrap: pretty}
+h2 {font-size: 1.25rem; font-weight: 600; letter-spacing: -.025em}
+h3 {font-size: 1rem; font-weight: 650}
+small,.small {font-size: var(--text-sm)}
+.muted {color: var(--muted)}
+.mono {font-family: ui-monospace, monospace; font-size: var(--text-xs)}
+.wrap {overflow-wrap: anywhere}
+.skip-link {position: absolute; z-index: 10; top: -100px; inset-inline-start: 1rem; background: var(--surface); padding: 1rem}
+.skip-link:focus {top: 1rem}
+.site-header {max-width: 1440px; margin: auto; min-height: 94px; padding: 1.3rem 3.5rem; display: flex; gap: 3rem; align-items: center; border-bottom: 1px solid var(--line)}
+.brand {display: inline-flex; align-items: center; text-decoration: none; font-size: 1.6rem; font-weight: 700; letter-spacing: -.055em; white-space: nowrap}
+.brand-dot {color: var(--accent)}
+.brand-icon {display: flex; align-items: center; gap: 4px; height: 28px; margin-inline-end: .7rem}
+.brand-icon i {position: relative; display: block; width: 5px; height: 13px; border-radius: 1px; background: var(--accent)}
+.brand-icon i:before {content: ''; position: absolute; width: 1px; top: -5px; bottom: -4px; left: 2px; background: var(--accent)}
+.brand-icon i:nth-child(2) {height: 23px}.brand-icon i:nth-child(3) {height: 9px}
+.site-header nav {display: flex; gap: 1.8rem; font-size: var(--text-sm)}
+.site-header nav a {text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; color: var(--muted)}
+.site-header nav a[aria-current] {color: var(--text)}
+.wallet-bar {display: flex; align-items: center; margin-inline-start: auto; gap: 1rem}
+.network-tag {font-size: var(--text-sm); white-space: nowrap}
+.network-tag > span {color: var(--warning); font-size: 1.2rem}
+.wallet-button {background: transparent; border-color: #b8c1b0}
+main {max-width: 1440px; padding: 3.4rem 3.5rem 2.5rem; margin: auto; scroll-margin-top: 1rem}
+.page-intro {display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; margin-bottom: 3.4rem}
+.eyebrow {color: var(--muted); text-transform: uppercase; letter-spacing: .12em; font-size: .6875rem; font-weight: 650; margin-bottom: .9rem}
+h1 {font-size: clamp(2rem, 3.2vw, 3rem); letter-spacing: -.055em; font-weight: 550; line-height: 1.16}
+h1 span {color: var(--muted)}
+.page-intro > p {font-size: var(--text-md); color: var(--muted); line-height: 1.7; max-width: 32ch; padding-bottom: .2rem}
+.market-heading {display: flex; justify-content: space-between; gap: 1rem; align-items: center; margin-bottom: 1.4rem}
+.pair-title {display: flex; align-items: center; gap: .9rem}
+.token-icon {width: 46px; height: 46px; flex-shrink: 0; border-radius: 50%; display: grid; place-items: center; background: var(--accent); color: var(--surface); font-family: Georgia, serif; font-size: 1.75rem}
+.pair-title h2 {font-size: 1.6rem; letter-spacing: -.04em}.pair-title h2 span {color: var(--muted); font-weight: 400}
+.pair-title p {font-size: var(--text-sm); color: var(--muted); margin-top: .25rem}.pair-title p span {margin-inline: .35rem}
+.market-status {display: flex; align-items: center; gap: .5rem; font-size: var(--text-xs); color: var(--muted)}
+.status-dot {width: 6px; height: 6px; border-radius: 50%; background: var(--muted)}.status-dot.online {background: var(--positive)}
+.small-button {font-size: var(--text-xs); background: transparent; margin-inline-start: .8rem}
+.market-grid {display: grid; grid-template-columns: minmax(0, 1fr) 344px; gap: 1.5rem; align-items: start}
+.chart-panel {min-width: 0; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); overflow: hidden}
+.stats {display: flex; align-items: flex-start; justify-content: space-between; gap: 1.25rem; padding: 1.7rem 1.7rem 1.2rem; font-variant-numeric: tabular-nums}
+.stats p {color: var(--muted); font-size: var(--text-xs); margin-bottom: .5rem}
+.stats p span {display: block; font-size: .6875rem}
+.stats strong {font-size: 1.2rem; font-weight: 550; display: block; line-height: 1.4}
+.stats strong small {font-size: var(--text-xs); font-weight: 400; color: var(--muted)}
+.price-stat {flex: 1}.price-stat strong {font-size: clamp(1.65rem, 2.4vw, 2.3rem); letter-spacing: -.05em; line-height: 1.2; margin-bottom: .2rem}
+.chart-toolbar {display: flex; justify-content: space-between; align-items: center; gap: .5rem; padding: 1.1rem 1.7rem .6rem}
+.chart-toolbar > div {display: flex; align-items: center; gap: .6rem}
+.selected-pill {font-size: var(--text-xs); background: var(--subtle); padding: .35rem .6rem; border-radius: 5px; font-weight: 600}
+.chart-legend {display: flex; align-items: center; gap: .3rem; color: var(--muted); font-size: .625rem}
+.chart-legend i {height: 6px; width: 6px; display: inline-block; margin-inline-start: .4rem}
+.up-key {background: var(--positive)}.down-key {background: var(--negative)}.flat-key {background: var(--muted)}
+.candle-readout {display: flex; flex-wrap: wrap; gap: .6rem; padding: .5rem 1.7rem; min-height: 34px; color: var(--muted); font-size: .625rem; font-variant-numeric: tabular-nums}.candle-readout b {color: var(--text); font-weight: 500}
+.chart-wrap {padding: 0 .7rem}.chart-wrap svg {display: block; width: 100%; height: auto; min-height: 185px}
+.grid-line {stroke: var(--line); stroke-dasharray: 3 5; stroke-width: .6}.axis {fill: var(--muted); font-size: 10px; font-family: inherit}
+.candle-up {fill: var(--positive); stroke: var(--positive)}.candle-down {fill: var(--negative); stroke: var(--negative)}.candle-flat {fill: var(--muted); stroke: var(--muted)}
+.crosshair {stroke: var(--muted); stroke-width: .5; stroke-dasharray: 4 4}
+.chart-selector {padding: .8rem 1.7rem .6rem; display: flex; flex-wrap: wrap; gap: .3rem 1rem; align-items: center}
+.chart-selector label {font-size: var(--text-xs); white-space: nowrap}.chart-selector label span {color: var(--muted); margin-inline-start: .5rem}
+.chart-selector input {flex: 1; min-width: 100px; width: 100px; padding: 0; accent-color: var(--accent); min-height: 32px}.chart-selector > span {width: 100%}
+.candle-table {padding: 0 1.7rem}.candle-table summary {font-size: var(--text-xs)}
+summary {min-height: 44px; padding-block: .7rem; font-size: var(--text-sm); font-weight: 500}summary span {color: var(--muted); font-size: var(--text-xs); margin-inline-start: .5rem}
+.table-scroll {overflow: auto; max-height: 320px; margin-block: .5rem}
+table {border-collapse: collapse; font-size: var(--text-xs); font-variant-numeric: tabular-nums; width: 100%; white-space: nowrap}
+caption {text-align: start; white-space: normal; padding: .5rem; color: var(--muted)}th,td {text-align: end; padding: .65rem; border-bottom: 1px solid var(--line)}th {font-weight: 550}
+.chart-note {display: flex; gap: .5rem; padding: 1rem 1.7rem; color: var(--muted); font-size: var(--text-xs); line-height: 1.6; border-top: 1px solid var(--line); margin-top: .5rem}
+.chart-empty {min-height: 353px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: .5rem; padding: 1.5rem; background: repeating-linear-gradient(0deg, transparent, transparent 59px, var(--subtle) 60px, transparent 61px)}
+.chart-empty p {max-width: 34ch; color: var(--muted); font-size: var(--text-sm)}.empty-mark {font-size: 2.5rem; color: var(--muted)}
+.trade-panel {background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.5rem}
+.section-heading {display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.2rem}
+.section-heading h2 {font-size: 1.125rem}.testnet-badge {background: var(--warning-bg); color: var(--warning); border-radius: 4px; padding: .25rem .5rem; font-size: .625rem; font-weight: 650}
+.segmented {display: flex; padding: 4px; background: var(--subtle); border-radius: 10px; gap: 4px; margin-bottom: 1.3rem}
+.segmented button {flex: 1; border: 0; background: transparent; min-height: 40px; color: var(--muted); padding: .4rem}.segmented button[aria-pressed=true] {background: var(--surface); color: var(--text); box-shadow: 0 1px 3px #202b2014; border-radius: 6px}
+.amount-box {border: 1px solid #b2bfaa; border-radius: 10px; padding: .9rem 1rem}
+.amount-box label, .output-box > span {font-size: var(--text-xs); color: var(--muted)}
+.amount-row {display: flex; gap: .5rem; align-items: center; margin-block: .3rem}
+.amount-row input {width: 100%; font-size: 1.8rem; letter-spacing: -.05em; font-weight: 500; border: 0; padding: 0; border-radius: 1px; background: transparent}
+.amount-row > span {font-size: var(--text-sm); font-weight: 600}
+.amount-box p,.output-box p {font-size: .6875rem; color: var(--muted)}
+.direction-arrow {display: grid; place-items: center; color: var(--muted); height: 25px; font-size: .9rem}
+.output-box {padding: .9rem 1rem; background: var(--bg); border-radius: 10px}
+.output-box > div {display: flex; justify-content: space-between; gap: .4rem; align-items: center; margin: .6rem 0}.output-box strong {font-size: 1.55rem; font-weight: 500; overflow-wrap: anywhere}.output-box b {font-size: var(--text-sm); font-weight: 550}
+.tolerance {display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin: 1rem 0 .5rem; font-size: var(--text-xs)}
+.tolerance > div {display: flex; align-items: center; border: 1px solid var(--line); border-radius: 6px; padding-inline-end: .55rem; width: 85px}.tolerance input {border: none; padding: .35rem .3rem .35rem .6rem; min-height: 36px; background: transparent}
+.trade-facts {display: grid; gap: .4rem; margin-block: 1rem; font-size: var(--text-xs); color: var(--muted)}.trade-facts span {display: flex; justify-content: space-between}.trade-facts b {font-weight: 500; color: var(--text)}
+.quote-button {width:100%}
+.primary {width: 100%; border-color: var(--accent); background: var(--accent); color: white; min-height: 46px; font-size: var(--text-sm)}.primary:disabled {border-color: var(--line)}
+.trade-hint {font-size: var(--text-xs); text-align: center; color: var(--muted); margin-top: .8rem}
+.router-note {font-size: .625rem; color: var(--muted); text-align: center; margin-top: 1rem}
+.quote-actions {border-top: 1px solid var(--line); padding-top: .75rem; margin-top: .75rem}.quote-actions p {font-size: var(--text-sm); margin-bottom: .75rem}.quote-actions h3 {margin-bottom: .6rem}
+.preview-box {padding: .8rem; background: var(--accent-soft); border-radius: 8px}
+.action-error:not(:empty), .action-status:not(:empty) {padding: .75rem; margin-top: 1rem; font-size: var(--text-sm); border-radius: 8px; overflow-wrap: anywhere}.action-error:not(:empty) {background: var(--error-bg); color: var(--error)}.action-status:not(:empty) {background: var(--subtle)}
+.transaction-link {font-size: var(--text-xs); display: block; margin-top: .7rem; overflow-wrap: anywhere}
+.notice {padding: 1rem; margin-bottom: 1rem; background: var(--warning-bg); border: 1px solid #ead4be; color: var(--warning); border-radius: 8px; font-size: var(--text-sm); overflow-wrap: anywhere}.notice.error {color: var(--error); background: var(--error-bg); border-color: #efd3c9}.network-notice {display: flex; gap: 1rem; justify-content: space-between; align-items: center}
+.lower-grid {display: grid; grid-template-columns: 1.16fr 1fr; gap: 3rem; margin-top: 2.8rem;padding-top: 2.3rem; border-top: 1px solid var(--line)}
+.lower-grid section {min-width: 0}.lower-grid .eyebrow {margin-bottom: .6rem}.lower-grid h2 {font-size: 1.3rem}
+.subtle-label {font-size: var(--text-xs); color: var(--muted)}
+.activity-empty {display: flex; align-items: center; gap: 1rem; padding: 1.8rem 1rem 2rem 0}.activity-empty > span {font-size: 2rem; color: var(--muted)}.activity-empty strong {font-size: var(--text-md); font-weight: 550}.activity-empty p {font-size: var(--text-sm); color: var(--muted); margin-top: .3rem; max-width: 43ch}
+.event-row {display: flex; align-items: center; gap: .75rem; text-decoration: none; padding: .9rem 0; border-top: 1px solid var(--line)}.event-icon {width: 30px; height: 30px; background: var(--subtle); border-radius: 6px; display: grid; place-items: center; flex-shrink: 0}.event-row > div {display: grid; gap: .2rem; min-width: 0}.event-row > div:last-child {margin-inline-start: auto; text-align: end}.event-row strong {font-size: var(--text-xs); font-weight: 550}.event-row span {font-size: .6875rem; color: var(--muted)}.event-list {margin-bottom: .7rem}
+.about-hook > p:not(.eyebrow) {font-size: var(--text-md); color: var(--muted); line-height: 1.75; max-width: 57ch; margin: 1rem 0 1.4rem}
+.hook-features {display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: var(--text-xs); color: var(--muted); margin-bottom: 1.5rem}.hook-features b {display: block; color: var(--text); font-size: var(--text-sm); font-weight: 600; margin-bottom: .3rem}
+.about-hook details {border-top: 1px solid var(--line)}.details-list {font-size: var(--text-xs)}.details-list > div {display: flex; justify-content: space-between; align-items: baseline; gap: 1.5rem; margin-bottom: .6rem}.details-list dt {color: var(--muted); min-width: 85px}.details-list dd {text-align: end; margin: 0; overflow-wrap: anywhere; min-width: 0}
+.contract-links {display: grid; gap: .5rem; font-size: var(--text-xs); margin-bottom: 1rem}.contract-links a {display: flex; flex-wrap: wrap; justify-content: space-between; gap: .3rem; padding-block: .3rem}
+.wallet-tools {margin-top: 2rem; padding-block: .6rem; border-block: 1px solid var(--line)}.wallet-tools-content {display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; padding: 1rem 0 1.5rem}.wallet-tools-content form {display: grid; gap: .6rem}.wallet-tools-content p {margin-block: .7rem; overflow-wrap: anywhere}.wallet-tools-content label {font-size: var(--text-sm)}.wallet-tools-content h3 {margin-bottom: .5rem}
+footer {max-width: 1440px; margin: auto; display: flex; align-items: center; gap: 2rem; padding: .5rem 3.5rem 2rem; font-size: var(--text-xs); color: var(--muted)}footer .brand {font-size: 1.1rem; color: var(--text)}footer > span {margin-inline-start: auto}
+.startup {max-width: 640px; padding-top: 15vh}.startup h1 {margin-block: 2rem 1rem}.startup p {margin-block: 1rem}.startup .brand {color: var(--accent)}
+@media (hover: hover) {button:not(:disabled):hover {border-color: var(--accent); background: var(--accent-soft)}.primary:not(:disabled):hover {background: var(--accent-hover); color: white}a:hover {color: var(--accent-hover)}summary:hover {color: var(--accent)}}
+@media (prefers-reduced-motion: no-preference) {button {transition: background-color 120ms ease, transform 120ms ease}button:not(:disabled):active {transform: scale(.96)}}
+@media (max-width: 75rem) {.site-header {padding-inline: 2rem; gap: 2rem}main {padding-inline: 2rem}.market-grid {grid-template-columns: minmax(0,1fr) 320px; gap: 1rem}.stats {padding: 1.4rem; gap: .9rem}.chart-toolbar {padding-inline: 1.4rem}.chart-legend {display: none}.trade-panel {padding: 1.2rem}footer {padding-inline: 2rem}}
+@media (max-width: 59rem) {.site-header {gap: 1.5rem}.site-header nav {gap: 1rem}.network-tag {display: none}.market-grid {grid-template-columns: minmax(0,1fr) 300px}.stats {flex-wrap: wrap}.price-stat {flex-basis: 100%}.stats > div:not(:first-child) {flex:1}.chart-toolbar > div {flex-wrap: wrap}.chart-wrap {padding: 0 .3rem}.chart-selector,.candle-readout,.candle-table {padding-inline: 1rem}.chart-note {padding-inline: 1rem}.page-intro > p {font-size: var(--text-sm)}.lower-grid {gap: 2rem}}
+@media (max-width: 47rem) {.site-header {padding: 1rem 1.25rem; gap: .75rem; min-height: 80px}.site-header nav {display: none}.brand {font-size: 1.45rem}.wallet-button {font-size: var(--text-xs); padding-inline: .75rem}.wallet-bar {gap: .5rem}main {padding: 2.3rem 1.25rem 2rem}.page-intro {align-items: flex-start; flex-direction: column; gap: 1rem; margin-bottom: 2.1rem}.page-intro > p {max-width: 38ch;font-size: var(--text-sm)}h1 {font-size: 2.2rem}.market-grid {grid-template-columns: 1fr}.chart-panel {order:0}.trade-panel {order:1;padding:1.4rem}.stats {flex-wrap: nowrap; gap: 1rem}.price-stat {flex-basis:auto}.stats strong {font-size: 1rem}.price-stat strong {font-size: 1.9rem}.stats > div:not(:first-child) {flex:initial}.chart-legend {display:flex}.chart-toolbar {flex-wrap:wrap}.chart-empty {min-height:280px}.lower-grid {grid-template-columns:1fr; gap:2rem; margin-top:2rem; padding-top:2rem}.wallet-tools-content {grid-template-columns:1fr;gap:2rem}footer {padding-inline:1.25rem; gap:.7rem; flex-wrap:wrap}footer > span {margin-inline-start:0; flex-basis:100%}.network-notice {align-items:flex-start;flex-direction:column}.market-status {flex-wrap:wrap;justify-content:flex-end; max-width:120px;gap:.3rem}.small-button {margin-inline-start:0}.market-heading {align-items:flex-start}.pair-title h2 {font-size:1.35rem}.wallet-tools > summary span {display:block;margin-inline-start:1rem}}
+@media (max-width: 25rem) {main {padding-inline:1rem}.site-header {padding-inline:1rem}.brand-icon {display:none}.stats {flex-wrap:wrap;padding:1.15rem}.price-stat {flex-basis:100%}.stats > div:not(:first-child) {flex:1}.chart-toolbar {padding-inline:1rem}.pair-title {gap:.6rem}.token-icon {width:38px;height:38px}.pair-title p {font-size:.6875rem}.page-intro h1 {font-size:1.85rem}.trade-panel {padding:1.15rem}.chart-legend {font-size:.625rem}.details-list > div {flex-direction:column;gap:.2rem}.details-list dd {text-align:start}}
+@media (forced-colors: active) {:focus-visible {outline-color: Highlight}button {border-color: ButtonText}.primary {border:2px solid ButtonText}.candle-up,.candle-down,.candle-flat {stroke:CanvasText;fill:CanvasText}}

@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "launchId": "fbed9a85-d733-4ebc-bcef-b3c64f494b96",
+  "chainId": 11155111,
+  "sourceCommit": "99360eb2aed3b3fbf17bb327c0f5b9aa31881bb6",
+  "attestationHash": "19e2f3dc982c9395c7fcf7723e6b002651527e4571a6de744a7a277bba51aece",
+  "contracts": [
+    {
+      "name": "CNDL",
+      "address": "0x5845f623771593af103d486e451353d9355caaeb",
+      "abiHash": "38880b8e56d42ce900f744a7908c7139632a49f1c3f33385c64ceaed29d37bee",
+      "abiPath": "abi/CNDL.json"
+    },
+    {
+      "name": "OHLCCandleHook",
+      "address": "0x59b7a674a6bbaf2fb25defff3c5b9d77950d1040",
+      "abiHash": "3804b4873c69fc1ba3c1fd34ac8f941979d1752442848153b95c4b08e738694d",
+      "abiPath": "abi/OHLCCandleHook.json"
+    }
+  ],
+  "assets": [
+    {
+      "path": "abi/CNDL.json",
+      "sha256": "9578fcb499b4ba5fac51462a67a2654d9f803e0ea3af9bdb19130ff695808542"
+    },
+    {
+      "path": "abi/OHLCCandleHook.json",
+      "sha256": "558f49ba5c884e11610d13e470a569cdd4f1f22cb23f4227250741569026f14c"
+    },
+    {
+      "path": "abi/PoolSwapTest.json",
+      "sha256": "515484a7b8289078d8914d1634fd4b707bc155f0f89ba996cf5a358d0b85ae4d"
+    },
+    {
+      "path": "abi/Quoter.json",
+      "sha256": "7f7fc4ea986a47c4fa51210389fe1d8799df5c506433644676d1b34e29256653"
+    },
+    {
+      "path": "abi/StateView.json",
+      "sha256": "8a741e973ad017eaa69755db077cca762b055e3b45c834b7340f09caff3e6e0e"
+    },
+    {
+      "path": "assets/chain-BenLCg49.js",
+      "sha256": "319c8e6128f76677feeb7cd34808a22d60f6515cf32254d715287693ddd35ca8"
+    },
+    {
+      "path": "assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2",
+      "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+    },
+    {
+      "path": "assets/index-CHcHyQdY.css",
+      "sha256": "b7aad39e19e99f72205369db9b73504cd29d5fb6abc034c0fcee3817126dc032"
+    },
+    {
+      "path": "assets/index-N7hTH0DV.js",
+      "sha256": "0db221049e90e09339b091ed454404b216d8198d848d843f08c83f7ed5f63969"
+    },
+    {
+      "path": "assets/react-D-vXKkXw.js",
+      "sha256": "5bd2c22c5ac91c4ce645d8ae78f06f037b6035b9d44b91d92fa8cfc7016d321e"
+    },
+    {
+      "path": "index.html",
+      "sha256": "acb2c5b3b008c0b83586fba73dfda051e143866821e8097b33240cd3187ecaac"
+    }
+  ],
+  "network": {
+    "chainId": 11155111,
+    "name": "Sepolia",
+    "testnet": true,
+    "rpcUrls": [
+      "https://ethereum-sepolia-rpc.publicnode.com",
+      "https://rpc.sepolia.ethpandaops.io",
+      "https://sepolia.rpc.sentio.xyz"
+    ],
+    "explorer": "https://sepolia.etherscan.io",
+    "nativeCurrency": {
+      "name": "Sepolia Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "faucets": [
+      "https://cloud.google.com/application/web3/faucet/ethereum/sepolia",
+      "https://www.alchemy.com/faucets/ethereum-sepolia"
+    ],
+    "uniswapV4": {
+      "poolManager": "0xe03a1074c86cfedd5c142c4f04f1a1536e203543",
+      "universalRouter": "0x3a9d48ab9751398bbfa63ad67599bb04e4bdf98b",
+      "quoter": "0x61b3f2011a92d183c7dbadbda940a7555ccf9227",
+      "stateView": "0xe1dd9c3fa50edb962e442f60dfbc432e24537e4c",
+      "positionManager": "0x429ba70129df741b2ca2a85bc3a2a3328e5c09b4",
+      "permit2": "0x000000000022d473030f116ddee9f6b43ac78ba3"
+    }
+  },
+  "app": {
+    "pool": {
+      "fee": 3000,
+      "tickSpacing": 60,
+      "initialPrice": "79228162514264337593543950336000",
+      "pairedCurrency": "0x0000000000000000000000000000000000000000"
+    },
+    "token": {
+      "name": "Candles",
+      "symbol": "CNDL",
+      "contract": "CNDL",
+      "decimals": 18
+    },
+    "hookContract": "OHLCCandleHook",
+    "deploymentBlock": 11791647,
+    "walletAddChain": {
+      "chainId": "0xaa36a7",
+      "chainName": "Sepolia",
+      "rpcUrls": [
+        "https://ethereum-sepolia-rpc.publicnode.com",
+        "https://rpc.sepolia.ethpandaops.io",
+        "https://sepolia.rpc.sentio.xyz"
+      ],
+      "nativeCurrency": {
+        "name": "Sepolia Ether",
+        "symbol": "ETH",
+        "decimals": 18
+      },
+      "blockExplorerUrls": [
+        "https://sepolia.etherscan.io"
+      ]
+    },
+    "router": {
+      "name": "PoolSwapTest",
+      "address": "0x9b6b46e2c869aa39918db7f52f5557fe577b6eee",
+      "source": "https://developers.uniswap.org/deployments",
+      "note": "Explicit assignment router; absent from the supplied network.uniswapV4 table. That table is preserved unchanged."
+    },
+    "abiPaths": {
+      "StateView": "abi/StateView.json",
+      "Quoter": "abi/Quoter.json",
+      "PoolSwapTest": "abi/PoolSwapTest.json"
+    }
+  }
+}

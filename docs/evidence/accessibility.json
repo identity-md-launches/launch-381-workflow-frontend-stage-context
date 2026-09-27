@@ -1,0 +1,84 @@
+{
+  "violations": [],
+  "passes": [
+    "aria-allowed-attr",
+    "aria-conditional-attr",
+    "aria-deprecated-role",
+    "aria-hidden-body",
+    "aria-hidden-focus",
+    "aria-prohibited-attr",
+    "aria-required-attr",
+    "aria-roles",
+    "aria-valid-attr-value",
+    "aria-valid-attr",
+    "autocomplete-valid",
+    "button-name",
+    "bypass",
+    "color-contrast",
+    "document-title",
+    "duplicate-id-aria",
+    "form-field-multiple-labels",
+    "html-has-lang",
+    "html-lang-valid",
+    "label",
+    "link-in-text-block",
+    "link-name",
+    "meta-viewport",
+    "nested-interactive",
+    "summary-name",
+    "svg-img-alt"
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": [
+        [
+          ".network-tag > span[aria-hidden=\"true\"]"
+        ],
+        [
+          ".small-button > span[aria-hidden=\"true\"]"
+        ],
+        [
+          "text[y=\"26\"]"
+        ],
+        [
+          "text[y=\"81\"]"
+        ],
+        [
+          "text[y=\"136\"]"
+        ],
+        [
+          "text[y=\"191\"]"
+        ],
+        [
+          "text[y=\"246\"]"
+        ],
+        [
+          "text[y=\"272\"]"
+        ],
+        [
+          "text[x=\"12\"][text-anchor=\"start\"][y=\"326\"]"
+        ],
+        [
+          "text[x=\"179.04\"]"
+        ],
+        [
+          "text[x=\"346.08\"]"
+        ],
+        [
+          "text[x=\"513.1199999999999\"]"
+        ],
+        [
+          "text[x=\"677.8399999999999\"]"
+        ],
+        [
+          ".chart-note > span[aria-hidden=\"true\"]"
+        ],
+        [
+          ".direction-arrow"
+        ]
+      ]
+    }
+  ]
+}

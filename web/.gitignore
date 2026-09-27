@@ -1,0 +1,9 @@
+# Explicit assignment path budget: web/.gitignore only.
+**/node_modules/
+**/.cache/
+**/.vite/
+**/coverage/
+**/test-results/
+**/playwright-report/
+**/*.tsbuildinfo
+**/*.tgz

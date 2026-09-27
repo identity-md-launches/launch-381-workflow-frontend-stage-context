@@ -1,0 +1,125 @@
+{
+  "timestamp": "2026-09-27T07:33:13.056Z",
+  "browser": "153.0.8010.12",
+  "transport": "Exact production bytes served by Playwright; public RPC responses relayed unchanged by Node fetch because browser loopback/network is restricted.",
+  "requests": [
+    {
+      "url": "https://ethereum-sepolia-rpc.publicnode.com/",
+      "method": "eth_chainId",
+      "status": 200,
+      "cors": "*"
+    },
+    {
+      "url": "https://ethereum-sepolia-rpc.publicnode.com/",
+      "method": "eth_getCode",
+      "status": 200,
+      "cors": "*"
+    },
+    {
+      "url": "https://ethereum-sepolia-rpc.publicnode.com/",
+      "method": "eth_getCode",
+      "status": 200,
+      "cors": "*"
+    },
+    {
+      "url": "https://ethereum-sepolia-rpc.publicnode.com/",
+      "method": "eth_getCode",
+      "status": 200,
+      "cors": "*"
+    },
+    {
+      "url": "https://ethereum-sepolia-rpc.publicnode.com/",
+      "method": "eth_getCode",
+      "status": 200,
+      "cors": "*"
+    },
+    {
+      "url": "https://ethereum-sepolia-rpc.publicnode.com/",
+      "method": "eth_getCode",
+      "status": 200,
+      "cors": "*"
+    },
+    {
+      "url": "https://ethereum-sepolia-rpc.publicnode.com/",
+      "method": "eth_getCode",
+      "status": 200,
+      "cors": "*"
+    },
+    {
+      "url": "https://ethereum-sepolia-rpc.publicnode.com/",
+      "method": "eth_call",
+      "status": 200,
+      "cors": "*"
+    },
+    {
+      "url": "https://ethereum-sepolia-rpc.publicnode.com/",
+      "method": "eth_call",
+      "status": 200,
+      "cors": "*"
+    },
+    {
+      "url": "https://ethereum-sepolia-rpc.publicnode.com/",
+      "method": "eth_getBlockByNumber",
+      "status": 200,
+      "cors": "*"
+    },
+    {
+      "url": "https://ethereum-sepolia-rpc.publicnode.com/",
+      "method": "eth_call",
+      "status": 200,
+      "cors": "*"
+    },
+    {
+      "url": "https://ethereum-sepolia-rpc.publicnode.com/",
+      "method": "eth_call",
+      "status": 200,
+      "cors": "*"
+    },
+    {
+      "url": "https://ethereum-sepolia-rpc.publicnode.com/",
+      "method": "eth_call",
+      "status": 200,
+      "cors": "*"
+    },
+    {
+      "url": "https://ethereum-sepolia-rpc.publicnode.com/",
+      "method": "eth_call",
+      "status": 200,
+      "cors": "*"
+    },
+    {
+      "url": "https://ethereum-sepolia-rpc.publicnode.com/",
+      "method": "eth_call",
+      "status": 200,
+      "cors": "*"
+    },
+    {
+      "url": "https://ethereum-sepolia-rpc.publicnode.com/",
+      "method": "eth_call",
+      "status": 200,
+      "cors": "*"
+    },
+    {
+      "url": "https://ethereum-sepolia-rpc.publicnode.com/",
+      "method": "eth_call",
+      "status": 200,
+      "cors": "*"
+    },
+    {
+      "url": "https://ethereum-sepolia-rpc.publicnode.com/",
+      "method": "eth_call",
+      "status": 200,
+      "cors": "*"
+    },
+    {
+      "url": "https://ethereum-sepolia-rpc.publicnode.com/",
+      "method": "eth_getLogs",
+      "status": 200,
+      "cors": "*"
+    }
+  ],
+  "errors": [],
+  "livePoolVisible": true,
+  "flatGapVisible": true,
+  "transactionsBroadcast": 0
+}
